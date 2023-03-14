@@ -1,0 +1,16 @@
+{% extends '_layout.html' %}
+
+{% block title %}Movie Rating App | All Movies{% endblock %}
+
+{% block body %}
+<h1 class="mb-5">All Movies</h1>
+<p class="mb-3">See our list of movie ratings below</p>
+{% if list_movies_active %}
+{% for movie in repo %}
+<p>
+    Movie Title: {{movie.title}} Director: {{movie.director}} Rating: {{movie.rating}}
+</p><br>
+
+{% endfor %}
+{% endif %}
+{% endblock %}
